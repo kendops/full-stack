@@ -34,15 +34,14 @@ fullstack-app
 ---
 
 ## **Prerequisites**
+
 Ensure you have the following installed on your system:
 
 1. **Docker** (>= 20.10)
    sudo dnf install -y docker
-
 2. **Docker Compose** (>= 1.29)
    sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$$(uname -m)" -o /usr/local/bin/docker-compose
    sudo chmod +x /usr/local/bin/docker-compose
-
 3. **Enable & Start Docker Service**
    sudo systemctl** **enable** **--now docker
    sudo systemctl** **enable** **--now docker
@@ -52,22 +51,23 @@ Ensure you have the following installed on your system:
 ## **How to Build & Run**
 
 ### **1. Build Docker Containers**
+
 docker-compose build
 
 ### **2. Run Full-Stack Application**
+
 docker-compose up -d
 
 ### **3. Verify Running Containers**
+
 docker ps
 
 ### **4. Access the Application**
 
 * **Frontend (React/Next.js/Gatsby UI):**
   👉** **`http://localhost:3000`
-
 * **Backend (Spring Boot API):**
   👉** **`http://localhost:8080`
-
 * **Database (MySQL):**
   Connect using** **`localhost:3306` with** ** **backenduser/backendpass** .
 
@@ -123,3 +123,29 @@ docker system prune -a
 * **Fully Automated Deployment** with Docker.
 
 Now your full-stack application is containerized and ready to deploy!
+
+### Sample
+
+https://github.com/NerminKarapandzic/spring-boot-nextjs-starter-kit.git
+
+
+
+### Status (WIP)
+
+[](https://github.com/ahstn/docker-spring-react#status-wip)
+
+* API (Java - Spring Boot)
+  * [X] CRUD Endpoints
+  * [ ] Tests
+  * [X] Dockerised
+  * [ ] Postgres Integration (Uses in-memory db for now)
+* Frontend (Javascript - React Redux)
+  * [ ] CRUD Endpoints
+  * [ ] Tests
+  * [ ] Styling
+  * [X] Dockerised
+* Database (PostgreSQL)
+  * [X] Dockerised (For quick development)
+  * [ ] Updated employees schema
+* Docker Compose
+  * [ ] All services running and tested
